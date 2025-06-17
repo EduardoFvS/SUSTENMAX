@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body{
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 45px;
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+#max{
+    color: #a5da15;
+    text-decoration: none;
+}
+
+#sust{
+    text-decoration: none;
+    color: #fff;
+}
+
+.picapau{
+    height: 500px;
+}
+
+.err{
+    margin-left: 45px;
+    font-size: 100px;
+    color: #82b402;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+}
+
+.esp{
+    margin-left: 45px;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.apa{
+    margin-left: 45px;
+    color: green;
+    font-family: 'Poppins', sans-serif;
+}
+
+.txt2{
+    margin-left: 45px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.voltar{
+    margin-left: 45px;
+    background-color: #82b402;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+@media(max-width: 992px){
+    .picapau{
+        display: none;
+    }
+    .err{
+        font-size: 80px;
+        color: #82b402;
+        font-weight: bolder;
+        font-family: 'Poppins', sans-serif;
+    }
+    .esp{
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+    }
+    .txt2{
+        margin-right: 35px;
+        font-size: 13px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+@media(max-width: 576px){
+    .picapau{
+        display: none;
+    }
+    .err{
+        font-size: 80px;
+        color: #82b402;
+        font-weight: bolder;
+        font-family: 'Poppins', sans-serif;
+    }
+    .esp{
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+    }
+    .txt2{
+        margin-right: 35px;
+        font-size: 13px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+}
