@@ -34,11 +34,33 @@ li {
     color: #a5da15;
 }
 
-
 .link1 {
-    text-decoration: none;
+    position: relative;
+    display: inline-block;
     color: #fff;
     font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+
+.link1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #a5da15;
+    transition: width 0.5s ease;
+}
+
+.link1:hover {
+    color: #a5da15;
+}
+
+.link1:hover::after {
+    width: 100%;
 }
 
 #cart{
@@ -47,9 +69,6 @@ li {
     cursor: pointer;
 }
 
-.link1:hover{
-    color: #a5da15;
-}
 
 .buscar-box{
     width: 25px;
