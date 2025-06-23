@@ -58,3 +58,46 @@ window.addEventListener('scroll', function() {
         header.classList.remove('fixo');
     }
 });
+
+
+async function criarConta() {
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+  
+    const res = await fetch("http://localhost:8080/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: nome, email: email, password: senha })
+    });
+  
+    const data = await res.json();
+    if (res.ok) {
+    document.getElementById("registerButton").addEventListener("click", login);
+      alert("Conta criada com sucesso!");
+      window.location.href = "/login.html";
+    } else {
+      alert("Erro: " + data.error);
+    }
+  }
+
+  async function login() {
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+  
+    const res = await fetch("http://localhost:8080/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email, password: senha })
+    });
+  
+    const data = await res.json();
+    if (res.ok) {
+        document.getElementById("loginButton").addEventListener("click", login);
+      alert("Bem-vindo, " + data.name);
+      window.location.href = "/produtos/produtos.html";
+    } else {
+      alert("Erro: " + data.error);
+    }
+  }
+  
