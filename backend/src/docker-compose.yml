@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: sustenmax-db
+    environment:
+      POSTGRES_DB: sustenmax
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - sustenmax-net
+
+volumes:
+  pgdata:
+
+networks:
+  sustenmax-net:
